@@ -100,11 +100,77 @@
  *  undeclared :- variable has not been declared at all in the current accessible scope
  */
 
-var a;
-console.log(a);
-//console.log(q); // error message: ReferenceError: q is not defined (meaning undeclared)
-console.log(typeof (q));
+// var a;
+// console.log(a);
+// //console.log(q); // error message: ReferenceError: q is not defined (meaning undeclared)
+// console.log(typeof (q));
 
-var myobj = {};
+// var myobj = {};
 
-console.log(typeof (myobj.prop))
+// console.log(typeof (myobj.prop))
+
+/**
+ * Built-in Type Methods
+ */
+
+// var a = "hello World";
+// var b = 3.14159;
+
+/**
+ * string builtin methods
+ */
+
+// console.log(a.toUpperCase())
+
+/**
+ * number builtin methods
+ */
+
+// console.log(b.toFixed(3));
+// var myString = String(b);
+// console.log(typeof (myString));
+// console.log(myString);
+// // implicit type coercion will occur here
+// console.log(a + " " + b.toFixed(2))
+
+// var myNum = Number(a);
+// console.log(myNum);
+// console.log(Boolean({}));
+
+/**
+ * Equality: 
+ *  == :- loose equality with coercion allowed
+ *  === :- strict equality without coercion allowed
+ */
+
+// var a = null;
+// var b = 42;
+
+// if (a == b) {
+//     console.log(a + " is loosely equal (==) to " + b)
+// } else {
+//     console.log(a + " is not loosely equal (==) to " + b)
+// }
+
+// if (a === b) {
+//     console.log(a + " is strict equal (===) to " + b)
+// } else {
+//     console.log("Coercion not allowed here there \"" + a + "\" is not equal to " + b)
+// }
+
+/**
+ * Comparison of reference types
+ *
+ */
+
+var a = [1, 2, 3];
+var b = [1, 2, 3];
+var c = "1,2,3";
+
+console.log(a == c);
+console.log(b == c);
+console.log(a == b); // checks by reference
+
+console.log(a === c);
+console.log(b === c);
+console.log(a === b);
