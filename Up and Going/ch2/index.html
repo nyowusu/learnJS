@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test page JS</title>
+</head>
+
+<body>
+    <p id="first" class="p1 p2 p3">this is a paragraph</p>
+    <p id="second" class="p1">this is another paragraph</p>
+    <p id="third" class="p3">this is a third paragraph</p>
+</body>
+<script>
+    document.onload(function (e) {
+        let ele = document.getElementById("first");
+        ele.onclick(function (e) {
+            ele.textContent = "I have been clicked"
+        });
+    });
+</script>
+
+</html>
